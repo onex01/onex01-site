@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneX01 Project</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Карта сайта -->
+    <link rel="sitemap" type="application/xml" title="Карта сайта" href="sitemap.xml">
+    
+    <!-- Подключаем файл со стилями -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем иконки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Подключаем шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Контейнер для анимированного градиента -->
+    <div class="gradient-bg"></div>
+
+    <!-- Основной контейнер -->
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header>
+            <h1 class="header-logo">OneX01 Project</h1>
+            <p class="tagline">Разработка, технологии и чуть больше</p>
+        </header>
+
+        <!-- Навигация - вкладки -->
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="home">
+                <i class="fas fa-home"></i> Главная
+            </button>
+            <button class="tab-button" data-tab="projects">
+                <i class="fas fa-code"></i> Проекты
+            </button>
+            <button class="tab-button" data-tab="minecraft">
+                <i class="fas fa-server"></i> Minecraft сервер
+            </button>
+        </nav>
+
+        <!-- Контент вкладок -->
+        <main>
+            <!-- Вкладка 1: Главная (контакты) -->
+            <div class="tab-content active" id="home">
+                <section class="card about">
+                    <h2><i class="fas fa-user"></i> Обо мне</h2>
+                    <p>Привет! Меня зовут Илья, ник же <strong>OneX01</strong>. Я увлекаюсь разным родом желза, ковыряться в нем, да и делаю что то необычное из него, выжимаю все соки так сказать.</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email: <a href="mailto:ilya.anikin.2018@list.ru">ilya.anikin.2018@list.ru</a></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-google"></i>
+                            <span>Gmail: <a href="mailto:ilya.anikin.2018@gmail.com">ilya.anikin.2018@gmail.com</a></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram: <a href="https://t.me/onex016" target="_blank">@onex016</a></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Telegram-канал: <a href="https://t.me/by_OneX01" target="_blank">@by_OneX01</a></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-vk"></i>
+                            <span>VK: <a href="https://vk.com/ilya_0_7" target="_blank">Илья Аникин</a></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub: <a href="https://github.com/onex01" target="_blank">onex01</a></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Вкладка 2: Проекты -->
+            <div class="tab-content" id="projects">
+                <section class="card projects">
+                    <h2><i class="fas fa-code"></i> Мои проекты</h2>
+                    <p>Ниже представлены мои ключевые работы. Кликните на ссылки, чтобы узнать подробнее.</p>
+                    
+                    <div class="project-list">
+                        <div class="project-item">
+                            <h3>HyperOS by.OneX01</h3>
+                            <p>Прошивка на основе стока для телефона Xiaomi 12 Lite (taoyao). Больше функционала, меньше предустановленного срача, оптимизирована для лучшей производительности.</p>
+                            <a href="https://t.me/by_OneX01/266" target="_blank" class="project-link">
+                                <i class="fab fa-telegram"></i> Смотреть в Telegram
+                            </a>
+                        </div>
+                        
+                        <div class="project-item">
+                            <h3>Скрипт автоматической установки для Xiaomi 12 Lite</h3>
+                            <p>Эти скрипты автоматически устанавливают AOSP Recovery для прошивки на базе Android 15 на taoyao, а также настраивают OrangeFox Recovery.</p>
+                            <a href="https://github.com/onex01/taoyao_auto_install" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Исходный код на GitHub
+                            </a>
+                        </div>
+                        
+                        <div class="project-item">
+                            <h3>Сайт OneX01 Project</h3>
+                            <p>Этот самый сайт, который вы сейчас просматриваете. Сделан с использованием HTML, CSS и JavaScript.</p>
+                            <a href="https://github.com/onex01/onex01-site" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Исходный код
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Вкладка 3: Minecraft сервер -->
+                <div class="tab-content" id="minecraft">
+                    <section class="card minecraft">
+                        <h2><i class="fas fa-server"></i> Minecraft сервер</h2>
+        
+                        <!-- Статус сервера -->
+                        <div class="server-status">
+                            <div class="status-header">
+                                <h3>Статус сервера</h3>
+                                <div class="status-indicator">
+                                    <div class="status-dot" id="statusDot"></div>
+                                    <span class="status-text" id="statusText">Проверка...</span>
+                                    <span class="last-updated" id="lastUpdated"></span>
+                                </div>
+                            </div>
+            
+                            <div class="server-info">
+                                <div class="info-row">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Адрес: 
+                                        <strong id="serverAddress">onex01.ddns.net</strong>
+                                        <button class="copy-icon" title="Скопировать адрес">
+                                            <i class="far fa-copy"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="info-row">
+                                    <i class="fas fa-plug"></i>
+                                    <span>Порт: <strong>25565</strong> (автоподключение)</span>
+                                </div>
+                                <div class="info-row">
+                                    <i class="fas fa-users"></i>
+                                    <span>Игроков онлайн: <strong id="onlinePlayers">0</strong>/<strong id="maxPlayers">20</strong></span>
+                                </div>
+                                <div class="info-row">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Версия: <strong id="serverVersion">1.21.11</strong></span>
+                                </div>
+                                <div class="info-row">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <span>Обновляется: <strong>каждую минуту</strong></span>
+                                </div>
+                            </div>
+            
+                            <!-- Кнопка подключения -->
+                            <div class="connect-options" id="connectOptions" style="display: none;">
+                                <button class="minecraft-button connect-copy" id="copyButton">
+                                    <i class="fas fa-copy"></i> Скопировать адрес
+                                </button>
+                            </div>
+                            
+                            <!-- Карта мира -->
+                            <div class="world-map" id="worldMap" style="display: none;">
+                                <h3><i class="fas fa-map"></i> Карта мира в реальном времени</h3>
+                                <p>Сервер активен! Вы можете просмотреть карту мира:</p>
+                                <a href="http://onex01.ddns.net:8100" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Открыть карту мира
+                                </a>
+                                <div class="map-preview">
+                                    <p><small>Карта обновляется в реальном времени и показывает расположение игроков, построек и ландшафт.</small></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Сообщение если сервер оффлайн -->
+                            <div class="server-offline" id="serverOffline" style="display: none;">
+                                <div class="offline-message">
+                                    <i class="fas fa-power-off"></i>
+                                    <h3>Сервер в данный момент неактивен</h3>
+                                    <p>Сервер может быть временно отключен на техническое обслуживание или обновление.</p>
+                                    <p>Попробуйте проверить позже или свяжитесь со мной для уточнения информации.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Дополнительная информация о сервере -->
+                    <section class="card server-info-card">
+                        <h3><i class="fas fa-info-circle"></i> О сервере</h3>
+                        <ul class="server-features">
+                            <li><i class="fas fa-check-circle"></i> Ванильный геймплей 1.21.11</li>
+                            <li><i class="fas fa-check-circle"></i> Регулярные бекапы мира</li>
+                            <li><i class="fas fa-check-circle"></i> Защита от гриферства</li>
+                            <li><i class="fas fa-check-circle"></i> Техническая поддержка</li>
+                            <li><i class="fas fa-check-circle"></i> Карта мира в реальном времени</li>
+                            <li><i class="fas fa-check-circle"></i> Автоподключение (порт не нужен)</li>
+                            <li><i class="fas fa-check-circle"></i> Мониторинг статуса каждую минуту</li>
+                        </ul>
+                        <p class="server-note"><i class="fas fa-clock"></i> Статус обновляется автоматически каждые 60 секунд</p>
+                        <button class="refresh-button" id="manualRefresh">
+                            <i class="fas fa-sync-alt"></i> Обновить статус сейчас
+                        </button>
+                    </section>
+                </div>
+
+        <!-- Подвал сайта -->
+        <footer>
+            <p>© <span id="currentYear"></span> OneX01 Project. Все права защищены.</p>
+            <p class="footer-note">Свяжитесь со мной через любой из указанных выше каналов.</p>
+            <p class="footer-note" style="font-size: 0.7rem; margin-top: 5px;">
+                <i class="fas fa-sync-alt"></i> Статус сервера обновляется каждую минуту
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

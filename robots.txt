@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://onex01.ddns.net/sitemap.xml

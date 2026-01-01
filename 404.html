@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена - OneX01 Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    
+    <div class="container" style="text-align: center; padding-top: 100px;">
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <h1 style="font-size: 6rem; margin-bottom: 20px;">404</h1>
+            <h2><i class="fas fa-exclamation-triangle"></i> Страница не найдена</h2>
+            <p>Извините, запрашиваемая страница не существует или была перемещена.</p>
+            
+            <div style="margin: 30px 0;">
+                <i class="fas fa-search" style="font-size: 3rem; color: #a78bfa; margin-bottom: 20px;"></i>
+            </div>
+            
+            <p>Возможно, вы искали:</p>
+            <div style="display: flex; flex-direction: column; gap: 15px; margin: 25px 0;">
+                <a href="index.html" class="project-link" style="justify-content: center;">
+                    <i class="fas fa-home"></i> На главную страницу
+                </a>
+                <a href="mailto:ilya.anikin.2018@list.ru" class="project-link" style="justify-content: center;">
+                    <i class="fas fa-envelope"></i> Связаться со мной
+                </a>
+            </div>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="font-size: 0.9rem; color: #b0b0d0;">
+                    Если вы считаете, что это ошибка, пожалуйста, сообщите мне
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <footer style="position: fixed; bottom: 0; width: 100%; text-align: center; padding: 20px;">
+        <p>© <span id="currentYear"></span> OneX01 Project</p>
+    </footer>
+    
+    <script>
+        // Устанавливаем текущий год
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
