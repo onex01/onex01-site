@@ -224,8 +224,8 @@ header h1 {
     color: #b19df7;
     text-decoration: none;
     transition: all 0.3s ease;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 2px;
+    border-bottom: 5px solid transparent;
+    padding-bottom: 0px;
     word-break: break-all;
 }
 
@@ -274,16 +274,16 @@ header h1 {
 .project-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 15px;
-    padding: 10px 20px;
+    gap: 5px;
+    margin-top: 0px;
+    padding: 5px 10px;
     background: linear-gradient(135deg, rgba(138, 43, 226, 0.25), rgba(65, 105, 225, 0.25));
-    border-radius: 12px;
+    border-radius: 10px;
     color: #b19df7;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 1px solid rgba(138, 43, 226, 0.3);
+    border: 0px solid rgba(138, 43, 226, 0.3);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
