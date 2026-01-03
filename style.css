@@ -308,6 +308,11 @@ header h1 {
     border-color: rgba(51, 51, 51, 0.3);
 }
 
+/* Интервал для дополнительной кнопки */
+.download-btn {
+    margin-top: 10px;
+}
+
 /* Стили для Minecraft раздела */
 .server-status {
     margin-top: 20px;
