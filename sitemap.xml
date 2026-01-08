@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://onex01.ddns.net/</loc>
+    <loc>http://onex01.ddns.net/</loc>
     <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ddns.net/ru/</loc>
+    <loc>http://onex01.ddns.net/ru/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ddns.net/en/</loc>
+    <loc>http://onex01.ddns.net/en/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ddns.net/ru/win-disclaimer.html/</loc>
+    <loc>http://onex01.ddns.net/ru/win-disclaimer/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ddns.net/en/win-disclaimer.html/</loc>
+    <loc>http://onex01.ddns.net/en/win-disclaimer/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 </urlset>
+
