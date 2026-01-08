@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Windows build | OneX01 Project</title>
+    
+    <!-- Используем те же ресурсы что и на основном сайте -->
+    <link rel="stylesheet" href="/shared/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Canvas для дыма -->
+    <canvas id="smokeCanvas"></canvas>
+
+    <!-- Основной контейнер -->
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header>
+            <h1 class="header-logo">Windows Experimental Build</h1>
+            <p class="tagline">Important warning before downloading</p>
+        </header>
+
+        <div style="text-align: right; margin-bottom: 20px;">
+            <a href="/ru/win-disclaimer/" style="color: #b0b0d0; text-decoration: none;">
+                Русская версия
+            </a>
+        </div>
+        
+        <!-- Контент -->
+        <main>
+            <!-- Предупреждение -->
+            <section class="card about">
+                <div class="warning-header" style="text-align: center; margin-bottom: 25px;">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #ff6b6b; margin-bottom: 15px;"></i>
+                    <h2 style="color: #ff6b6b; justify-content: center">Experimental Windows Build</h2>
+                    <p style="color: #b0b0d0; margin-top: 10px;">Please read the information below carefully.</p>
+                </div>
+
+                <div style="background: rgba(244, 67, 54, 0.1); border-radius: 15px; padding: 25px; margin-bottom: 25px; border-left: 4px solid #ff6b6b;">
+                    <h3 style="color: #ff8e53; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-radiation"></i> IMPORTANT WARNING
+                    </h3>
+                    <ul style="color: #e0e0e0; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 10px;">This build has been created <strong>for experimental purposes</strong></li>
+                        <li style="margin-bottom: 10px;"><strong>It is not intended for commercial use</strong></li>
+                        <li style="margin-bottom: 10px;">It may contain unstable changes.</li>
+                        <li style="margin-bottom: 10px;">Not suitable for desktop computers</li>
+                        <li style="margin-bottom: 10px;">The author is not responsible for any problems.</li>
+                        <li>Requires a legal Windows license to activate</li>
+                    </ul>
+                </div>
+
+                <!-- Соглашение -->
+                <div class="agreement-section" style="margin: 30px 0;">
+                    <h3 style="color: #d4c6ff; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-file-signature"></i> Terms of use
+                    </h3>
+                    
+                    <div class="checkbox-group" style="background: rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                        <div class="checkbox-item" style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; padding: 15px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
+                            <input type="checkbox" id="agree1" style="width: 20px; height: 20px; margin-top: 3px; accent-color: #4169e1;">
+                            <label for="agree1" style="color: #d1d1e9; line-height: 1.5; cursor: pointer;">
+                                I'm using this build <strong>for informational purposes only</strong>
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item" style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; padding: 15px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
+                            <input type="checkbox" id="agree2" style="width: 20px; height: 20px; margin-top: 3px; accent-color: #4169e1;">
+                            <label for="agree2" style="color: #d1d1e9; line-height: 1.5; cursor: pointer;">
+                                I understand that this <strong>is not an official Microsoft product.</strong>
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item" style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; padding: 15px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
+                            <input type="checkbox" id="agree3" style="width: 20px; height: 20px; margin-top: 3px; accent-color: #4169e1;">
+                            <label for="agree3" style="color: #d1d1e9; line-height: 1.5; cursor: pointer;">
+                                I have <strong>a legal Windows license</strong> for activation
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item" style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; padding: 15px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
+                            <input type="checkbox" id="agree4" style="width: 20px; height: 20px; margin-top: 3px; accent-color: #4169e1;">
+                            <label for="agree4" style="color: #d1d1e9; line-height: 1.5; cursor: pointer;">
+                                I <strong>will not install on work computers</strong>
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-item" style="display: flex; align-items: flex-start; gap: 15px; padding: 15px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
+                            <input type="checkbox" id="agree5" style="width: 20px; height: 20px; margin-top: 3px; accent-color: #4169e1;">
+                            <label for="agree5" style="color: #d1d1e9; line-height: 1.5; cursor: pointer;">
+                                I take <strong>full responsibility</strong> for the consequences of the installation.
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="agreement-note" style="background: rgba(76, 175, 80, 0.1); border-radius: 10px; padding: 15px; text-align: center; border: 1px solid rgba(76, 175, 80, 0.2);">
+                        <i class="fas fa-shield-alt" style="color: #4CAF50;"></i>
+                        <span style="color: #d1d1e9; margin-left: 10px;">All conditions must be met to access the download</span>
+                    </div>
+                </div>
+
+                <!-- Кнопка загрузки -->
+                <div class="download-section" style="text-align: center; margin: 0px 0;">
+                    <a href="#" id="downloadLink" class="project-link" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; font-size: 1.1rem; pointer-events: none; opacity: 0.5;">
+                        <i class="fas fa-lock"></i>
+                        <span>Accept all the conditions above</span>
+                    </a>
+                </div>
+
+                <!-- Google Drive -->
+                <div class="download-section" style="text-align: center; margin: 0px 0;">
+                    <a href="#" id="downloadLinkGoogle" class="project-link" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; font-size: 1.1rem; pointer-events: none; opacity: 0.5;">
+                        <i class="fas fa-lock"></i>
+                        <span>Accept all the conditions above</span>
+                    </a>
+                    <p style="color: #b0b0d0; margin-top: 15px; font-size: 0.9rem;">
+                        After confirmation, a download link will appear.
+                    </p>
+                </div>
+
+                <!-- Альтернативные ссылки -->
+                <div class="alternative-links" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); justify-content: center;">
+                    <h3 style="color: #d4c6ff; margin-bottom: 15px;"><i class="fas fa-link"></i> Alternative options:</h3>
+                    
+                    <div class="win-disck" style="opacity: 1; transform: none;"> 
+                        <div class="info-item" style="opacity: 1; transform: none; margin-bottom: 0px;">
+                            <i class="fas fa-code"></i>
+                            <span>Optimization Scripts: 
+                                <a href="https://github.com/onex01/win-optimizer" target="_blank" style="color: #7ec8e3; justify-content: center;">
+                                    View on GitHub
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Юридический дисклеймер -->
+                <div class="legal-disclaimer" style="margin-top: 30px; ; padding: 20px; background: rgba(255, 255, 255, 0.02); border-radius: 10px; font-size: 0.8rem; color: #888;">
+                    <p style="margin-bottom: 0px;"><strong>Legal disclaimer of liability:</strong> This build is provided "AS IS". The author is not responsible for any damage. Windows is a trademark of Microsoft Corporation.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал сайта -->
+        <footer>
+            <p>© <span id="currentYear"></span> OneX01 Project. Windows is a trademark of Microsoft.</p>
+            <p class="footer-note">
+                <a href="/en/" style="color: #b19df7; text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i> Go back to the main page
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="/shared/js/en_script.js"></script>
+    
+    <!-- Скрипт для подтверждения -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Устанавливаем текущий год
+            const currentYearElement = document.getElementById('currentYear');
+            if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
+            
+            // Элементы
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const downloadLink = document.getElementById('downloadLink');
+            const downloadLinkGoogle = document.getElementById('downloadLinkGoogle');
+            
+            // Функция проверки всех чекбоксов
+            function checkAllChecked() {
+                const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+                
+                if (allChecked) {
+                    // Включаем ссылку
+                    downloadLink.style.pointerEvents = 'auto';
+                    downloadLink.style.opacity = '1';
+                    downloadLink.innerHTML = '<i class="fas fa-download"></i><span>Download the Windows 10 build(5.97 GB)</span>';
+                    downloadLinkGoogle.style.pointerEvents = 'auto';
+                    downloadLinkGoogle.style.opacity = '1';
+                    downloadLinkGoogle.innerHTML = '<i class="fab fa-google-drive"></i><span>Download via Google Drive</span>';
+                    
+                    // Добавляем обработчик
+                    downloadLink.onclick = function(e) {
+                        e.preventDefault();
+                        
+                        // Финальное подтверждение
+                        const confirmed = confirm(
+                            "FINAL CONFIRMATION\n\n" +
+                            "You confirm that:\n" +
+                            "• You are using the build for informational purposes ONLY\n" +
+                            "• You have a legal Windows license\n" +
+                            "• You will not use it on your work computers\n" +
+                            "• You understand the risks\n\n" +
+                            "Click OK to start the download"
+                        );
+                        
+                        if (confirmed) {
+                            // Логируем согласие
+                            console.log('✅ Пользователь согласился с условиями:', {
+                                timestamp: new Date().toISOString(),
+                                userAgent: navigator.userAgent
+                            });
+                            
+                            // Начинаем загрузку
+                            window.location.href = '/shared/uploads/Windows10_home-pro_by.onex01.iso';
+                        }
+                    };
+                    
+                    // Обработчик для Google
+                    downloadLinkGoogle.onclick = function(e) {
+                        e.preventDefault();
+                        
+                        // Финальное подтверждение
+                        const confirmed = confirm(
+                            "FINAL CONFIRMATION\n\n" +
+                            "You confirm that:\n" +
+                            "• You are using the build for informational purposes ONLY\n" +
+                            "• You have a legal Windows license\n" +
+                            "• You will not use it on your work computers\n" +
+                            "• You understand the risks\n\n" +
+                            "Click OK to start the download"
+                        );
+                        
+                        if (confirmed) {
+                            // Логируем согласие
+                            console.log('✅ Пользователь согласился с условиями:', {
+                                timestamp: new Date().toISOString(),
+                                userAgent: navigator.userAgent
+                            });
+                            
+                            // Начинаем загрузку
+                            window.location.href = 'https://drive.google.com/file/d/19vKW169Qd4Idc6E_b2wFbTu2OzKxIE7k/view';
+                        }
+                    };
+
+                } else {
+                    // Отключаем ссылку
+                    downloadLink.style.pointerEvents = 'none';
+                    downloadLink.style.opacity = '0.5';
+                    downloadLink.innerHTML = '<i class="fas fa-lock"></i><span>Accept all the conditions above</span>';
+                    downloadLink.onclick = null;
+                    downloadLinkGoogle.style.pointerEvents = 'none';
+                    downloadLinkGoogle.style.opacity = '0.5';
+                    downloadLinkGoogle.innerHTML = '<i class="fas fa-lock"></i><span>Accept all the conditions above</span>';
+                    downloadLinkGoogle.onclick = null;
+                }
+            }
+            
+            // Добавляем обработчики для чекбоксов
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', checkAllChecked);
+            });
+            
+            // Запускаем проверку при загрузке
+            checkAllChecked();
+            
+            // Показываем карточку с анимацией
+            const card = document.querySelector('.card');
+            if (card) {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, 300);
+            }
+            
+            // Показываем info-items
+            const infoItems = document.querySelectorAll('.info-item');
+            infoItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 500 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html>
