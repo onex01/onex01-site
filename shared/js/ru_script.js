@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 if (serverVersion) {
-                    serverVersion.textContent = '1.21.1';
+                    serverVersion.textContent = '1.21.11';
                 }
                 
                 console.log('❌ Сервер оффлайн');
@@ -481,7 +481,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (serverVersion) {
-                serverVersion.textContent = '1.21.1';
+                serverVersion.textContent = '1.21.11';
             }
         } finally {
             isChecking = false;
