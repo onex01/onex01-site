@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Development History - OneX01 Project</title>
+    
+    <!--Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    
+    <!--Styles -->
+    <link rel="stylesheet" href="/shared/css/style.css">
+    <link rel="stylesheet" href="/shared/css/history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!--Old background -->
+    <div class="old-bg"></div>
+    
+    <!--New background (smoke) -->
+    <canvas id="smokeCanvas"></canvas>
+    
+    <!--Container (as in your version) -->
+    <div class="container">
+    
+        <!--Central heading -->
+        <div class="header-logo" style="text-align: center; font-size: 2rem; margin-bottom: 20px;">
+            <h1>History of development</h1>
+        </div>
+
+        <div style="text-align: right; margin-bottom: 20px;">
+            <a href="/ru/history/" style="color: #b0b0d0; text-decoration: none;">
+                Русская версия
+            </a>
+        </div>
+        <!--First part: stages on the old background -->
+        <section class="card section" id="stage1">
+            <h2>Stage 1: Start</h2>
+            <p>
+                As the new year approaches, I decided to try writing my own website.
+                Naturally, with the help of AI, since before this I had never touched web development.
+                For the main AI assistant I chose DeepSeek, yes, perhaps a strange choice, but at least available in the Russian Federation.
+                I asked him a more detailed request about what I wanted to see, and naturally, he gave it to me.
+                I also asked him to make some changes to it, since I still didn’t understand what was responsible for what in HTML.
+                After a couple of unsuccessful requests, the AI ​​broke what I already liked at the initial stage.
+                Then I started trying to understand the HTML code and its additions, such as CSS and JS.
+            </p>
+            
+        </section>
+        
+        <section class="card section" id="stage2">
+            <h2>Stage 2: Development</h2>
+            <p>
+                From that moment on, I more or less understood the structure of HTML, what is responsible for what, but I decided not to stop at the page without anything.
+                First of all, I started to figure out how to add hyperlinks. Which turned out to be quite easy, but now this is not a tutorial, so next time we’ll talk about it
+                After adding hyperlinks to my contact details and adding links to the 2 projects that were added first, I decided to make tabs.
+                The whole point of tabs was to separate information and then add them. Here I needed AI again. So that he could write me a script to implement them and could write a style for them.
+                Three tabs appeared, which still exist today: the main one with contact information, the second with projects for public access, and the third for the status of the Minecraft server.
+                Then I needed to distribute the Windows 10 image file that I had assembled. After reading the information that they should not be distributed openly, I decided to make a separate page with a warning.
+                And let’s move on to, probably, the most delicious thing, a complete redesign of the background, background colors in my channel avatar, I decided to add smoke...
+            </p>
+        </section>
+        
+        <!--Transition trigger -->
+        <section class="card section" id="transition-point">
+            <h2>End of first version</h2>
+            <p>
+                Of course, the script that the AI ​​produced was unfinished, the smoke was too fast, too slow, and it’s still not finished, to be honest.
+                It was necessary to understand the mathematical conditions that he wrote, understand what he was responsible for, and catch 0.0001 for the normal operation of the smoke.
+                Further, after the background, I realized that the colors did not match the background, i.e. the background or the smoke was blue and white, but the rest of the site elements were purple, which did not connect.
+                I also had to figure out how CSS works, i.e. the style file for the site. Although I contradict my words at the very beginning that I began to understand, it was superficial.
+                After adding changes to all the color lines, I realized that some elements go beyond their boundaries in the mobile format, and then I remembered about the browser console for changing and debugging web pages.
+                This is where Chrome became a real tool, and not just an application for displaying YouTube and searching for various information.
+                I figured out the styles and began to change them more freely, so I managed to achieve the 50th element in the projects to more accurately fill the free space.
+            </p>
+        </section>
+        
+        <!--Second part: nuances against a new background -->
+        <section class="card section" id="nuance1">
+            <h2>Point 1: Problems</h2>
+            <p>
+                Most of the problems, of course, I described above, but in any case there were some pitfalls.
+                First of all, this is the host itself, from posts in my TGC it was known that the host is supported on a laptop, which is not very convenient and generally correct.
+                Next is the domain name, solutions with a free domain, of course, are rolled out, but they have their inconveniences.
+                Next comes the external design of the website, installing an icon on it, internal website settings for indexing, etc.
+                Security problems, although I might not have bothered with this, I still decided to do it.
+                Internal settings of hosting configs and identification of all errors.
+                Port forwarding.
+            </p>
+        </section>
+        
+        <section class="card section" id="nuance2">
+            <h2>Point 2: Solutions</h2>
+            <p>
+                I'll start from the very beginning. Even before creating the site, I ordered an Orange Pi Zero 3 with 4 GB of memory. I thought it would be a fun toy for 4 thousand rubles that could replace a computer. But it turned out that it is perfect as a host: silent, economical and compact.
+                I already had a domain, but I didn’t fully understand how it all worked. There are services that allow you to assign a domain to a dynamic IP address for access to the global network. However, nothing worked for me. I ended up buying a static IP address from my ISP. When I was able to connect from outside, I was very happy.
+                Then I purchased another domain for the RU region in my name and received full customization. The appearance of the site or icon is also important. It would be easier to add your own avatar, but it's not that easy. There is a site that automatically translates the image into the required file for embedding on the site. However, in Russia it works only with the help of special means. After receiving the file, everything started working.
+                The most interesting task was related to obtaining an SSL certificate. I found several ways to get it for free and paid. The free option required me to walk around the city and sign documents stating that I was the owner of the domain. It turned out to be too difficult. In the end, I tried to generate a certificate. The installation was successful, but the connection was not secure because the certificate was not signed by the issuing company.
+                Then I found Let's Encrypt, which issues a certificate and sets up hosting automatically. I installed it and everything worked inside the local network. But when I tried to connect externally, nothing worked. I turned to the AI ​​for help, but its advice did not help, and the site stopped working altogether.
+                I changed the operating system several times because it was easier for me to configure the necessary module than to correct AI errors. In the end, I decided not to worry about the certificate for now and focus on logging out of the local network. Then I learned about ports and began to figure it out. It turned out that the provider had closed ports. I paid for a static IP in order to use all the capabilities of the host, and not just 4-5 open ports out of 1024. There was no setting for opening ports, and the support robot responded with prepared phrases.
+                I started looking for information about whether these ports can be opened. It turned out that yes, you need to go to the hidden page of the provider and disable the firewall. After that everything worked and I was able to access the Internet using https.
+                I also optimized the internal part of the site. Due to many changes, three files turned into a “garbage dump”, which consumed a lot of traffic and loaded the processor and RAM. I separated the scripts, which helped free up 20-30% of the RAM from the original version. In the future I plan to separate the styles as there are too many of them being loaded. I haven't succeeded yet, but I will continue to work on it.
+            </p>
+        </section>
+        
+       <!--Footer -->
+        <div id="footer" style="padding-bottom: 40px;">
+            <p>Thank you for your interest in this project.</p>
+        </div>
+
+         <div class="end-title">
+            <p>Someone may say that this is a bunch of words, maybe it is, but it was written from the heart.</p>
+        </div>
+
+        <footer>
+            <p>© <span id="currentYear"></span> OneX01 Project.</p>
+            <p class="footer-note">
+                <a href="/en/" style="color: #b19df7; text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i> Go back to the main page
+                </a>
+            </p>
+        </footer>
+    </div>
+    
+    <!--Scripts -->
+    <script src="/shared/js/background.js"></script> <!--For smoke -->
+    <script src="/shared/js/history.js"></script>
+</body>
+</html>
