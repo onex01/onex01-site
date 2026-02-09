@@ -1,0 +1,1 @@
+Folder for uploading files from the root of the site
