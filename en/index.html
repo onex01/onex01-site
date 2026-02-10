@@ -51,6 +51,9 @@
             <button class="tab-button" data-tab="minecraft">
                 <i class="fas fa-server"></i> Minecraft server
             </button>
+            <button class="tab-button" data-tab="support">
+                <i class="fas fa-heart"></i> Support
+            </button>
         </nav>
 
         <!-- Контент вкладок -->
@@ -144,98 +147,222 @@
             </div>
 
             <!-- Вкладка 3: Minecraft сервер -->
-                <div class="tab-content" id="minecraft">
-                    <section class="card minecraft">
-                        <h2><i class="fas fa-server"></i> Minecraft server</h2>
-        
-                        <!-- Статус сервера -->
-                        <div class="server-status">
-                            <div class="status-header">
-                                <h3>Server status</h3>
-                                <div class="status-indicator">
-                                    <div class="status-dot" id="statusDot"></div>
-                                    <span class="status-text" id="statusText">Check...</span>
-                                    <span class="last-updated" id="lastUpdated"></span>
-                                </div>
-                            </div>
-            
-                            <div class="server-info">
-                                <div class="info-row">
-                                    <i class="fas fa-globe"></i>
-                                    <span>Address: 
-                                        <strong id="serverAddress">onex01.ddns.net</strong>
-                                        <button class="copy-icon" title="Copy the address">
-                                            <i class="far fa-copy"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                                <div class="info-row">
-                                    <i class="fas fa-plug"></i>
-                                    <span>Port: <strong>25565</strong> (auto-connect)</span>
-                                </div>
-                                <div class="info-row">
-                                    <i class="fas fa-users"></i>
-                                    <span>Online Players: <strong id="onlinePlayers">0</strong>/<strong id="maxPlayers">20</strong></span>
-                                </div>
-                                <div class="info-row">
-                                    <i class="fas fa-microchip"></i>
-                                    <span>Version: <strong id="serverVersion">1.21.11</strong></span>
-                                </div>
-                                <div class="info-row">
-                                    <i class="fas fa-sync-alt"></i>
-                                    <span>Updated: <strong>every minute</strong></span>
-                                </div>
-                            </div>
-            
-                            <!-- Кнопка подключения -->
-                            <div class="connect-options" id="connectOptions" style="display: none;">
-                                <button class="minecraft-button connect-copy" id="copyButton">
-                                    <i class="fas fa-copy"></i> Copy the address
-                                </button>
-                            </div>
-                            
-                            <!-- Карта мира -->
-                            <div class="world-map" id="worldMap" style="display: none;">
-                                <h3><i class="fas fa-map"></i> Real-time world map</h3>
-                                <p>The server is active! You can view the world map:</p>
-                                <a href="http://onex01.ddns.net:8100" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i> Open the world map
-                                </a>
-                                <div class="map-preview">
-                                    <small>The map is updated in real time and shows the location of players, buildings, and the landscape.</small>
-                                </div>
-                            </div>
-                            
-                            <!-- Сообщение если сервер оффлайн -->
-                            <div class="server-offline" id="serverOffline" style="display: none;">
-                                <div class="offline-message">
-                                    <i class="fas fa-power-off"></i>
-                                    <h3>The server is currently inactive.</h3>
-                                    <p>The server may be temporarily down for maintenance or updates.</p>
-                                    <p>Please try checking again later or contact me for more information.</p>
-                                </div>
+            <div class="tab-content" id="minecraft">
+                <section class="card minecraft">
+                    <h2><i class="fas fa-server"></i> Minecraft server</h2>
+    
+                    <!-- Статус сервера -->
+                    <div class="server-status">
+                        <div class="status-header">
+                            <h3>Server status</h3>
+                            <div class="status-indicator">
+                                <div class="status-dot" id="statusDot"></div>
+                                <span class="status-text" id="statusText">Check...</span>
+                                <span class="last-updated" id="lastUpdated"></span>
                             </div>
                         </div>
-                    </section>
+            
+                        <div class="server-info">
+                            <div class="info-row">
+                                <i class="fas fa-globe"></i>
+                                <span>Address: 
+                                    <strong id="serverAddress">onex01.ddns.net</strong>
+                                    <button class="copy-icon" title="Copy the address">
+                                        <i class="far fa-copy"></i>                                        
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="info-row">
+                                <i class="fas fa-plug"></i>
+                                <span>Port: <strong>25565</strong> (auto-connect)</span>
+                            </div>
+                            <div class="info-row">
+                                <i class="fas fa-users"></i>
+                            <span>Online Players: <strong id="onlinePlayers">0</strong>/<strong id="maxPlayers">20</strong></span>
+                            </div>
+                            <div class="info-row">
+                                <i class="fas fa-microchip"></i>
+                                <span>Version: <strong id="serverVersion">1.21.11</strong></span>
+                            </div>
+                            <div class="info-row">
+                                <i class="fas fa-sync-alt"></i>
+                                <span>Updated: <strong>every minute</strong></span>
+                            </div>
+                        </div>
+            
+                        <!-- Кнопка подключения -->
+                        <div class="connect-options" id="connectOptions" style="display: none;">
+                            <button class="minecraft-button connect-copy" id="copyButton">
+                                <i class="fas fa-copy"></i> Copy the address
+                            </button>
+                        </div>
+                            
+                        <!-- Карта мира -->
+                        <div class="world-map" id="worldMap" style="display: none;">
+                            <h3><i class="fas fa-map"></i> Real-time world map</h3>
+                            <p>The server is active! You can view the world map:</p>
+                            <a href="http://onex01.ddns.net:8100" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Open the world map
+                            </a>
+                            <div class="map-preview">
+                                <small>The map is updated in real time and shows the location of players, buildings, and the landscape.</small>
+                            </div>
+                        </div>
+                            
+                        <!-- Сообщение если сервер оффлайн -->
+                        <div class="server-offline" id="serverOffline" style="display: none;">
+                            <div class="offline-message">
+                                <i class="fas fa-power-off"></i>
+                                <h3>The server is currently inactive.</h3>
+                                <p>The server may be temporarily down for maintenance or updates.</p>
+                                <p>Please try checking again later or contact me for more information.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                     
-                    <!-- Дополнительная информация о сервере -->
-                    <section class="card server-info-card">
-                        <h3><i class="fas fa-info-circle"></i> About the server</h3>
-                        <ul class="server-features">
-                            <li><i class="fas fa-check-circle"></i> Vanilla Gameplay 1.21.11</li>
-                            <li><i class="fas fa-check-circle"></i> Regular backups of the world</li>
-                            <li><i class="fas fa-check-circle"></i> Protection against fraud</li>
-                            <li><i class="fas fa-check-circle"></i> Technical support</li>
-                            <li><i class="fas fa-check-circle"></i> Real-time world map</li>
-                            <li><i class="fas fa-check-circle"></i> Auto-connection (no port required)</li>
-                            <li><i class="fas fa-check-circle"></i> Status monitoring every minute</li>
-                        </ul>
-                        <p class="server-note"><i class="fas fa-clock"></i> The status is updated automatically every 60 seconds</p>
-                        <button class="refresh-button" id="manualRefresh">
-                            <i class="fas fa-sync-alt"></i> Update status now
-                        </button>
-                    </section>
-                </div>
+                <!-- Дополнительная информация о сервере -->
+                <section class="card server-info-card">
+                    <h3><i class="fas fa-info-circle"></i> About the server</h3>
+                    <ul class="server-features">
+                        <li><i class="fas fa-check-circle"></i> Vanilla Gameplay 1.21.11</li>
+                        <li><i class="fas fa-check-circle"></i> Regular backups of the world</li>
+                        <li><i class="fas fa-check-circle"></i> Protection against fraud</li>
+                        <li><i class="fas fa-check-circle"></i> Technical support</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time world map</li>
+                        <li><i class="fas fa-check-circle"></i> Auto-connection (no port required)</li>
+                        <li><i class="fas fa-check-circle"></i> Status monitoring every minute</li>
+                    </ul>
+                    <p class="server-note"><i class="fas fa-clock"></i> The status is updated automatically every 60 seconds</p>
+                    <button class="refresh-button" id="manualRefresh">
+                        <i class="fas fa-sync-alt"></i> Update status now
+                    </button>
+                </section>
+            </div>
+
+            <!-- Вкладка 4: Поддержка -->
+            <div class="tab-content" id="support">
+                <section class="card donation-hero">
+                    <h2><i class="fas fa-heart"></i> Support projects</h2>
+                    <p>My projects are created and developed thanks to your interest. If you want to support my work and help me create more useful content, here are some ways to do so.</p>
+                    
+                    <div class="motivation-grid">
+                        <div class="info-item visible">
+                            <i class="fas fa-code"></i>
+                            <span><strong>Project development:</strong> Hosting, domains, licenses, and new features</span>
+                        </div>
+                        <div class="info-item visible">
+                            <i class="fas fa-lightbulb"></i>
+                            <span><strong>New ideas:</strong> Experiments, pilot releases, and research</span>
+                        </div>
+                        <div class="info-item visible">
+                            <i class="fas fa-coffee"></i>
+                            <span><strong>Work processes:</strong> Maintaining the workspace</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card donation-methods">
+                    <h2><i class="fas fa-donate"></i> Support methods</h2>
+                    
+                    <!-- ЮMoney -->
+                    <div class="donation-method">
+                        <div class="method-header">
+                            <i class="fas fa-wallet" style="color: #FFCC00;"></i>
+                            <h3>YooMoney</h3>
+                        </div>
+                        <p>A quick and convenient way to support projects through YooMoney.</p>
+                        <div class="donation-address">
+                            <code id="yoomoney-address">4100118325787440</code>
+                            <button class="copy-icon copy-donation" data-address="4100118325787440" title="Copy the wallet number">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <a href="https://yoomoney.ru/to/4100118325787440" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Proceed to payment
+                        </a>
+                    </div>
+                    
+                    <!-- Карта Сбербанк -->
+                    <div class="donation-method">
+                        <div class="method-header">
+                            <i class="fas fa-credit-card" style="color: #21A038;"></i>
+                            <h3>Sberbank card</h3>
+                        </div>
+                        <p>Transfer to a Sberbank bank card.</p>
+                        <div class="donation-address">
+                            <code id="card-address">2202 2088 1043 1321</code>
+                            <button class="copy-icon copy-donation" data-address="2202 2061 7542 2082" title="Copy the card number">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="card-details">
+                            <p style="margin-bottom: 0px;"><small>Recipient: <strong>Ilya A.</strong></small></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Бусти -->
+                    <div class="donation-method">
+                        <div class="method-header">
+                            <i class="fas fa-star" style="color: #FF6B6B;"></i>
+                            <h3>Boosty</h3>
+                        </div>
+                        <p>Platform for monthly support.</p>
+                        <div class="donation-address">
+                            <code id="boosty-address">onex01</code>
+                            <button class="copy-icon copy-donation" data-address="https://boosty.to/onex01" title="Copy link">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <a href="https://boosty.to/onex01" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Switch to Boosty
+                        </a>
+                    </div>
+                </section>
+
+                <section class="card donation-options">
+                    <h2><i class="fas fa-gift"></i> Support Options</h2>
+                    
+                    <div class="options-grid">
+                        <div class="option-card">
+                            <div class="option-icon">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h3>Small, but so pleasant</h3>
+                            <p class="option-price">50-100 ₽</p>
+                            <p>Thank you for the small but nice support!</p>
+                        </div>
+                        
+                        <div class="option-card">
+                            <div class="option-icon">
+                                <i class="fa-solid fa-fire"></i>
+                            </div>
+                            <h3>Already serious</h3>
+                            <p class="option-price">300-500 ₽</p>
+                            <p>Such support will make it possible to implement something more interesting.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card donation-thanks">
+                    <h2><i class="fas fa-hands-helping"></i> Gratitude</h2>
+                    <p>Every donation, regardless of the amount, is very nice to me. Thanks to your support I can:</p>
+                    
+                    <ul class="thanks-list">
+                        <li><i class="fas fa-check-circle"></i> Spend more time developing projects</li>
+                        <li><i class="fas fa-check-circle"></i> Use the best equipment as you accumulate</li>
+                        <li><i class="fas fa-check-circle"></i> Experiment with new technologies</li>
+                        <li><i class="fas fa-check-circle"></i> Support existing projects (server, website)</li>
+                        <li><i class="fas fa-check-circle"></i> Create better content</li>
+                    </ul>
+                    
+                    <div class="thank-you-note">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Thank you for believing in my projects! Your support gives me motivation to continue doing what I love..</p>
+                        <div class="signature">— OneX01</div>
+                    </div>
+                </section>
+            </div>
 
         <!-- Подвал сайта -->
         <footer>
@@ -255,5 +382,6 @@
     <script src="/shared/js/background.js"></script>
     <script src="/shared/js/main.js"></script>
     <script src="/shared/js/mine-chek_ru.js"></script>
+    <script src="/shared/js/support.js"></script>
 </body>
 </html>
