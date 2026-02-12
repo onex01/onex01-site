@@ -76,6 +76,75 @@
     color: #fff;
 }
 
+/* Стили для подвала */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #cdcdcd;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 1.5s forwards;
+}
+
+.footer-note {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #cdcdcd;
+}
+
+/* Остальные стили */
+.download-btn {
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background: linear-gradient(135deg, rgb(65 105 225 / 25%), rgb(66 74 105 / 25%));;
+    border-radius: 10px;
+    color: #b19df7;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 0px solid rgba(234, 213, 253, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-link:hover {
+    background: linear-gradient(135deg, rgba(78, 65, 225, 0.428), rgb(66 74 105 / 25%));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.project-link i {
+    font-size: 1.1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: background 0.3s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.info-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, background 0.3s ease;
+}
+
 /* Адаптивность для win-disclaimer */
 @media (max-width: 768px) {
     .warning-header i {
