@@ -1,0 +1,94 @@
+/* Специальные стили для страницы win-disclaimer */
+
+/* Стили для заголовка предупреждения */
+.warning-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.warning-header i {
+    font-size: 3rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.warning-header h2 {
+    color: #ff6b6b;
+    justify-content: center;
+}
+
+.warning-header p {
+    color: #b0b0d0;
+    margin-top: 10px;
+}
+
+/* Стили для секции согласия */
+.agreement-section {
+    margin: 30px 0;
+}
+
+.agreement-section h3 {
+    color: #d4c6ff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Группа чекбоксов */
+.checkbox-group {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+}
+
+.checkbox-item:last-child {
+    margin-bottom: 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    accent-color: #4169e1;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    color: #d1d1e9;
+    line-height: 1.5;
+    cursor: pointer;
+    flex: 1;
+}
+
+.checkbox-item label strong {
+    color: #fff;
+}
+
+/* Адаптивность для win-disclaimer */
+@media (max-width: 768px) {
+    .warning-header i {
+        font-size: 2.5rem;
+    }
+    
+    .checkbox-item {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
+}
