@@ -1,6 +1,6 @@
 // ==================== MINECRAFT СЕРВЕР ====================
 let minecraftCheckInterval;
-const serverAddress = 'onex01.ddns.net';
+const serverAddress = 'game.onex01.ru';
 const serverAddressWithoutPort = serverAddress;
 let isChecking = false;
 
