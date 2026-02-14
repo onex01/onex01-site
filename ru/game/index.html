@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OneX01 Games</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="/shared/css/base.css">
+    <style>
+        .copy-icon {
+            background: transparent;
+            border: none;
+            color: #8a2be2;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all 0.2s ease;
+            margin-left: 10px;
+        }
+
+        .copy-icon:hover {
+            background: rgba(138, 43, 226, 0.1);
+            transform: scale(1.1);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="smokeCanvas"></canvas>
+
+    <div class="container">
+
+        <header>
+            <h1 class="header-logo">OneX01 Games</h1>
+        </header>
+
+        <div style="text-align: right; margin-bottom: 20px;">
+            <a href="/en/game/" style="color: #b0b0d0; text-decoration: none;">
+                English version
+            </a>
+        </div>
+
+        <main>
+            <section class="card about">
+                <h2><i class="fa-solid fa-circle-info"></i> Информация</h2>
+                <p>Домен <i style="color:slateblue">game.onex01.ru</i>
+                    <button class="copy-icon" style="margin-left: 0px; color:slateblue;" title="Скопировать адрес">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    предназначен для игровых серверов данного проекта.<br>
+                По вопросу создания игрового сервера под конкретный проект просим обращаться по контактным данным, представленным на <a href="/ru/" style="color: #b19df7;">главной</a> странице сайта. 
+                </p>
+            </section>
+        </main>
+  
+        <footer>
+            <p>© <span id="currentYear"></span> OneX01 Project. Все права защищены.</p>
+            <p class="footer-note">Свяжитесь со мной через любой из указанных выше каналов.</p>
+            <p class="footer-note">
+                <a href="/ru/" style="color: #b19df7; text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i> Вернуться на главную
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="/shared/js/background.js"></script>
+    <script>
+        const currentYearElement = document.getElementById('currentYear');
+        if (currentYearElement) {
+            currentYearElement.textContent = '2025-' + new Date().getFullYear();
+        }
+    </script>
+    <script>
+        // Функция для показа уведомлений
+        function showNotification(message, type = 'success') {
+            const notificationContainer = document.querySelector('.notification-container') || (() => {
+                const container = document.createElement('div');
+                container.className = 'notification-container';
+                document.body.appendChild(container);
+                return container;
+            })();
+            
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            notificationContainer.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+        
+        // Функция для копирования текста
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            
+            textarea.select();
+            textarea.setSelectionRange(0, 99999);
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showNotification('Скопировано: ' + text, 'success');
+                    console.log('✅ Скопировано:', text);
+                } else {
+                    showNotification('Не удалось скопировать', 'error');
+                }
+            } catch (err) {
+                console.error('Ошибка при копировании:', err);
+                showNotification('Ошибка при копировании', 'error');
+                
+                // Пробуем новый API
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(
+                        () => showNotification('Скопировано: ' + text, 'success'),
+                        () => showNotification('Ошибка при копировании', 'error')
+                    );
+                }
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+        
+        // Обработчик для кнопки копирования
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButtons = document.querySelectorAll('.copy-icon');
+            copyButtons.forEach(button => {
+                button.onclick = function() {
+                    copyToClipboard('game.onex01.ru');
+                };
+            });
+        });
+    </script>
+    <script>
+        // Показываем карточку с анимацией
+        const card = document.querySelector('.card');
+        if (card) {
+            setTimeout(() => {
+                card.classList.add('visible');
+            }, 300);
+        }
+                
+        // Показываем info-items
+        const infoItems = document.querySelectorAll('.info-item');
+        infoItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('visible');
+            }, 500 + (index * 100));
+        });
+    </script>
+</body>
+</html>
