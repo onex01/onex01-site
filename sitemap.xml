@@ -7,7 +7,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ru/404.html</loc>
+    <loc>https://onex01.ru/404/</loc>
     <lastmod>2026-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -49,62 +49,32 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ru/mc-server/</loc>
-    <lastmod>2026-01-22</lastmod>
+    <loc>https://onex01.ru/ru/game/</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ddns.net</loc>
-    <lastmod>2026-01-22</lastmod>
+    <loc>https://onex01.ru/en/game/</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ddns.net/404.html</loc>
-    <lastmod>2026-01-22</lastmod>
+    <loc>https://onex01.ru/map/</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ddns.net/ru/</loc>
-    <lastmod>2026-01-22</lastmod>
+    <loc>https://onex01.ru/map/lite/</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onex01.ddns.net/en/</loc>
-    <lastmod>2026-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://onex01.ddns.net/ru/win-disclaimer/</loc>
-    <lastmod>2026-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://onex01.ddns.net/en/win-disclaimer/</loc>
-    <lastmod>2026-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://onex01.ddns.net/ru/history/</loc>
-    <lastmod>2026-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://onex01.ddns.net/en/history/</loc>
-    <lastmod>2026-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://onex01.ddns.net/mc-server/</loc>
-    <lastmod>2026-01-22</lastmod>
+    <loc>https://onex01.ru/beta/index/</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
