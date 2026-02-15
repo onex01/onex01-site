@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OneX01 Site map</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="/shared/css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="smokeCanvas"></canvas>
+
+    <div class="container">
+
+        <header>
+            <h1 class="header-logo">OneX01 Site map</h1>
+        </header>
+
+        <main>
+            <section class="card about">
+                <h2><i class="fa-solid fa-map"></i> Site map</h2>
+                <p style="justify-content: center;">
+                    1. <a href="/">Home</a><br>
+                    2. <a href="/404/">404</a><br>
+                    3. <a href="/ru/">Russian main</a><br>
+                    4. <a href="/en/">English main</a><br>
+                    5. <a href="/beta/index/">Beta page</a><br>
+                    6. <a href="/ru/history/">History russian</a><br>
+                    7. <a href="/en/history/">History english</a><br>
+                    8. <a href="/ru/win-disclaimer/">Windows Disclaimer russian</a><br>
+                    9. <a href="/en/win-disclaimer/">Windows Disclaimer english</a><br>
+                    10. <a href="/ru/game/">Game russian</a><br>
+                    11. <a href="/en/game/">Game english</a><br>
+                    12. <a href="/map/">Map</a> <i class="fa-solid fa-left-long"></i> You're here<br>
+                    13. <a href="/map/lite">Map lite</a>
+                </p>
+            </section>
+        </main>
+  
+        <footer>
+            <p>© <span id="currentYear"></span> OneX01 Project. All rights reserved.</p>
+            <p class="footer-note">
+                <a href="/" style="color: #b19df7; text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i> Go back to the main page
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="/shared/js/background.js"></script>
+    <script>
+        const currentYearElement = document.getElementById('currentYear');
+        if (currentYearElement) {
+            currentYearElement.textContent = '2025-' + new Date().getFullYear();
+        }
+    </script>
+    <script>
+        // Показываем карточку с анимацией
+        const card = document.querySelector('.card');
+        if (card) {
+            setTimeout(() => {
+                card.classList.add('visible');
+            }, 300);
+        }
+                
+        // Показываем info-items
+        const infoItems = document.querySelectorAll('.info-item');
+        infoItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('visible');
+            }, 500 + (index * 100));
+        });
+    </script>
+</body>
+</html>
