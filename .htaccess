@@ -1,11 +1,1 @@
-# Минимальный .htaccess для начала
-RewriteEngine On
-RewriteBase /
-
-# Разрешить прямой доступ к файлам
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-
-# Перенаправление на русскую версию по умолчанию
-RewriteRule ^$ /ru/ [R=301,L]
+ErrorDocument 404 /404/index.html
