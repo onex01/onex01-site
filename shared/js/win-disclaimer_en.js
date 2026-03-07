@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                             
                     // Начинаем загрузку
-                    window.location.href = '/shared/uploads/Windows10_home-pro_by.onex01.iso';
+                    window.location.href = 'https://uploads.onex01.ru/ISO/Windows/Windows-10/24H2/Windows10_home-pro_by.onex01.iso';
                 }
             };
 
